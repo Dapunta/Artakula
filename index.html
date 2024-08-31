@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="main/assets/artakula_icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="main/assets/artakula_icon.png" type="image/x-icon">
+
+    <!-- Style Link -->
+    <link rel="stylesheet" href="main/css/global.css">
+    <link rel="stylesheet" href="main/css/main.css">
+    <link rel="stylesheet" href="main/css/history.css">
+
+    <!-- Import Link -->
+    <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+    <title>Artakula</title>
+</head>
+<body>
+    <div class="full-size">
+
+        <!-- Navigation Bar -->
+        <div class="navigation-section">
+            <div class="header-kiri">
+                <h1 class="title-nav segoi">Artakula</h1>
+                <a class="subtitle-nav segoi">Catat Pengeluaran Harianmu</a>
+            </div>
+            <div class="header-kanan">
+                <div class="profile-box" onclick="profileBoxToggle()">
+                    <img src="main/assets/profile_icon.png"></img>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Box -->
+        <div id="profile-section" class="profile-section segoi inactive">
+            <a>User ID</a>
+            <h1 id="userid">41162114201</h1>
+            <div class="breaker1"></div>
+            <a>Username</a>
+            <h1 id="username">dapunta</h1>
+            <button class="logout-button" onclick="logout()">Log Out</button>
+        </div>
+
+        <!-- Report Section -->
+        <div class="report-section segoi">
+            <div class="report-box">
+                <a id="report-date-day"></a>
+                <h1 id="amount-date-day"></h1>
+                <div class="breaker1"></div>
+                <a id="report-date-month"></a>
+                <h1 id="amount-date-month"></h1>
+            </div>
+            <div class="action-box">
+                <button onclick="addBoxToggle()"><i class="fa-solid fa-plus"></i>Tambah</button>
+                <button onclick="historyBoxToggle()"><i class="fa-solid fa-clock-rotate-left"></i>Riwayat</button>
+            </div>
+        </div>
+
+        <!-- Activity Section -->
+        <div class="activity-section segoi">
+            <div class="activity-box">
+                <a class="last-activity">Aktivitas Hari Ini</a>
+                <div id="list-activity" class="list-activity">
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Section -->
+        <div id="add-box" class="add-box segoi inactive">
+            <a class="add-title">Catat pengeluaranmu hari ini</a>
+            <div class="add-breakline"></div>
+            <div class="box-add-amount">
+                <h1 class="add-amount-currency">Rp</h1>
+                <input id="add-amount" class="input-add-amount" type="number" inputmode="numeric" autocomplete="off" autocapitalize="off" autofocus="off" autofill="off" spellcheck="false"></input>
+            </div>
+            <textarea id="add-note" class="input-add-note" type="text" placeholder="Tambah catatan" style="resize: none;" autocomplete="off" autocapitalize="off" autofocus="off" autofill="off" spellcheck="false"></textarea>
+            <button class="add-button-submit" onclick="nextAdd()">Tambah</button>
+            <a id="add-response" class="add-result segoi"></a>
+        </div>
+
+        <!-- History Section -->
+        <div id="history-section" class="history-section inactive">
+            <div class="history-navbox">
+                <div class="history-title-box segoi">
+                    <a>Riwayat</a>
+                </div>
+                <div class="history-close-box">
+                    <i class="history-close-mark fa-solid fa-xmark" onclick="historyBoxToggle()"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="main/javascript/main.js"></script>
+    <script src="main/javascript/fetch.js"></script>
+    <script src="main/javascript/global.js"></script>
+</body>
+</html>

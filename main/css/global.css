@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    background-color: black;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px white inset;
+    -webkit-text-fill-color: black;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+    text-decoration: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.full-size {
+    background-image:
+        url('../assets/artakula_bg.png'),
+        linear-gradient(to bottom, #EDE8F5, #ADBBDA);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    width: 100dvw;
+    height: 100dvh;
+    position: relative;
+    overflow: hidden;
+}
+
+.center-text {
+    margin: 0;
+    text-align: center;
+}
+
+.center-inner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.segoi {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

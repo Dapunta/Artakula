@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../main/assets/artakula_icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../main/assets/artakula_icon.png" type="image/x-icon">
+    <!-- Style Link -->
+    <link rel="stylesheet" href="../main/css/global.css">
+    <link rel="stylesheet" href="css/login.css">
+    <!-- Import Link -->
+    <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+    <title>Artakula | Login</title>
+</head>
+<body>
+    <div class="full-size">
+        <div class="header-content">
+            <h1 class="title center-text segoi">Artakula</h1>
+            <a class="subtitle center-text segoi">Catat Pengeluaran Harianmu</a>
+        </div>
+        <div class="main-content">
+            <div class="form-box center-inner-content">
+                <input id="username" class="input-form" type="text" placeholder="username" autocomplete="off" autocapitalize="off" autofocus="off" autofill="off" spellcheck="false"></input>
+                <input id="password" class="input-form" type="text" placeholder="password" autocomplete="off" autocapitalize="off" autofocus="off" autofill="off" spellcheck="false"></input>
+                <br>
+                <button class="login-button signin" onclick="nextSubmit('signin')">Sign In</button>
+                <button class="login-button signup" onclick="nextSubmit('signup')">Sign Up</button>
+                <br>
+                <a class="helper segoi">Butuh bantuan ?</a>
+                <br>
+                <a id="response-login" class="response-login segoi"></a>
+            </div>
+        </div>
+        <div class="footer-content center-inner-content">
+            <a id="version" class="version segoi"></a>
+        </div>
+    </div>
+    <script src="javascript/login.js"></script>
+    <script src="../main/javascript/global.js"></script>
+</body>
+</html>

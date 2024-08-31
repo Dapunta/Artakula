@@ -1,0 +1,68 @@
+/* Keyframe */
+
+@keyframes slide-up-history {
+    0% {
+        translate: 0 100%;
+    }
+    100% {
+        translate: 0 0;
+    }
+}
+
+/* History Section */
+
+.history-section.inactive {
+    display: none;
+}
+
+.history-section {
+    backdrop-filter: blur(100px);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    pointer-events: all;
+    animation: slide-up-history 0.7s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* History Navigation Bar */
+
+.history-navbox {
+    width: 100%;
+    height: 50px;
+}
+
+.history-title-box {
+    height: 100%;
+    width: 120px;
+    float: left;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 23px;
+    padding-right: 23px;
+}
+
+.history-title-box a {
+    color: white;
+    text-align: left;
+    font-size: 20px;
+}
+
+.history-close-box {
+    height: 100%;
+    aspect-ratio: 1;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.history-close-mark {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 24px;
+    cursor: pointer;
+}
